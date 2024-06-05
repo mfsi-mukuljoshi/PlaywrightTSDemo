@@ -15,7 +15,7 @@ export default class Login{
         await this.page.locator(this.username).fill(user)
     }
 
-    async setPassword(password:string)
+    async setPassword(password:string) 
     {
         await this.password.fill(password)
     }
