@@ -11,7 +11,6 @@ export default class Login{
 
     async setUserName(user:string)
     {
-        
         await this.page.locator(this.username).fill(user)
     }
 
