@@ -2,7 +2,7 @@ import {test} from '@playwright/test'
 import Login from '../pages/Login';
 import { decrypt, encrypt } from '../utils/CrytoUtil';
 
-test.skip('demo login',async({page})=>{
+test('demo login',async({page})=>{
     
     const login = new Login(page);
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
