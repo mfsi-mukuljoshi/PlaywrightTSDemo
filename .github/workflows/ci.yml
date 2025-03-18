@@ -25,7 +25,7 @@ jobs:
         run : npm install 
 
       - name : install playwright brwoser
-        run : npx playwright install chromium
+        run : npx playwright install 
 
       - name : playwroght test rum
-        run : npx playwright test /src/test/Demo.spec.ts --project=chromium --headed
+        run : npx playwright test /src/test/Demo.spec.ts --project=chromium
