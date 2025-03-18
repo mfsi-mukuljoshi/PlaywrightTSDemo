@@ -28,4 +28,4 @@ jobs:
         run : npx playwright install chromium
 
       - name : playwroght test rum
-        run : npx playwright test /src/test/Demo.spec.ts --project=chromium
+        run : npx playwright test /src/test/Demo.spec.ts --project=chromium --headed
