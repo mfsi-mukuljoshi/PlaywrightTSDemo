@@ -30,23 +30,20 @@ jobs:
       - name : playwroght test rum
         run : npx playwright test /src/test/Demo.spec.ts --project=chromium
 
-          # Upload HTML report as an artifact
       - name: Upload Playwright HTML Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.3.0
         with:
           name: playwright-report
           path: playwright-report
-  
-      # Upload JUnit report as an artifact
+        
       - name: Upload Playwright JUnit Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.3.0
         with:
-          name: junit-report
-          path: playwright-results.xml
-  
-      # Optionally, upload JSON report as an artifact
+            name: junit-report
+            path: playwright-results.xml
+        
       - name: Upload Playwright JSON Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2.3.0
         with:
-          name: json-report
-          path: playwright-results.json
+            name: json-report
+            path: playwright-results.json
