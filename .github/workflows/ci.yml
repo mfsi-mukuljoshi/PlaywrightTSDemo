@@ -1,0 +1,24 @@
+name: CI Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+      branches:
+        - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name : Chcekout code
+        uses: actions/checkout@v2
+
+      - name : installing node js
+        uses: actions/setup-node@v2
+
+      - name : install dependencies
+        run : npm install
+
+      - name : playwroght test rum
+        run : npx playwright test /src/test/Demo.spec.ts
