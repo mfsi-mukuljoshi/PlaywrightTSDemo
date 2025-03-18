@@ -20,26 +20,12 @@ jobs:
       - name : installing linux setup
         run : sudo apt-get update
 
-      - name : updating software
-        run : sudo apt-get install -y \
-              libwoff2-1 \
-              libvpx6 \
-              libevent-2.1-7 \
-              libopus0 \
-              libgstreamer-plugins-base1.0-0 \
-              libgstreamer1.0-0 \
-              libharfbuzz0b \
-              libsecret-1-0 \
-              libhyphen0 \
-              libflite1 \
-              libgles2 \
-              libx264-148
 
       - name : install dependencies
         run : npm install
 
       - name : install playwright brwoser
-        run : npx playwright install
+        run : npm playwright install
 
       - name : playwroght test rum
         run : npx playwright test /src/test/Demo.spec.ts
