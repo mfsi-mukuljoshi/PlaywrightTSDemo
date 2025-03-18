@@ -22,10 +22,10 @@ jobs:
 
 
       - name : install dependencies
-        run : npm install
+        run : npm install 
 
       - name : install playwright brwoser
-        run : npm playwright install
+        run : npx playwright install chromium
 
       - name : playwroght test rum
-        run : npx playwright test /src/test/Demo.spec.ts
+        run : npx playwright test /src/test/Demo.spec.ts --project=chromium
