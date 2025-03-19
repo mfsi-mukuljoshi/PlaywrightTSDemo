@@ -49,10 +49,10 @@ jobs:
           path: playwright-results.json
 
       - name: Set up JDK 8
-        uses: actions/setup-java@v4
-        with:
-          java-version: '8'
-          distribution: 'adoptium'
+        run: sudo apt search openjdk
+
+      - name: install java
+        run: sudo apt install openjdk-21-jdk
 
       - name: Install Allure CLI
         run: |
