@@ -37,14 +37,4 @@ jobs:
           name: playwright-report
           path: playwright-report
         
-      - name: Upload Playwright JUnit Report
-        uses: actions/upload-artifact@v1
-        with:
-            name: junit-report
-            path: playwright-results.xml
-        
-      - name: Upload Playwright JSON Report
-        uses: actions/upload-artifact@v1
-        with:
-            name: json-report
-            path: playwright-results.json
+    
