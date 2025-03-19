@@ -48,6 +48,12 @@ jobs:
           name: json-report
           path: playwright-results.json
 
+      - name: Set up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          java-version: '8'
+          distribution: 'adoptopenjdk'
+
       - name: Install Allure CLI
         run: |
           curl -o allure-commandline.tgz -L https://github.com/allure-framework/allure2/releases/download/2.17.3/allure-2.17.3.tgz
