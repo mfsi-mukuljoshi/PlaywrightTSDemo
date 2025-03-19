@@ -48,6 +48,22 @@ jobs:
           name: json-report
           path: playwright-results.json
 
+      - name: Install Allure CLI
+        run: |
+          curl -o allure-commandline.tgz -L https://github.com/allure-framework/allure2/releases/download/2.17.3/allure-2.17.3.tgz
+          tar -zxvf allure-commandline.tgz
+          sudo mv allure-2.17.3 /usr/local/bin/allure
+
+      - name: Generate Allure Report
+        run: |
+          allure generate ./allure-results --clean -o allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: allure-report
+
 
     
      
