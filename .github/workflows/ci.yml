@@ -43,7 +43,7 @@ jobs:
           path: playwright-results.xml
 
       - name: Upload Playwright JSON Report
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: json-report
           path: playwright-results.json
